@@ -52,3 +52,10 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Autor)
+admin.site.register(models.Genero)
+admin.site.register(models.Idioma)
+admin.site.register(models.Status) # se o nome correto for esse
+admin.site.register(models.Editora)
+admin.site.register(models.Frequencia)
+admin.site.register(models.HQ)

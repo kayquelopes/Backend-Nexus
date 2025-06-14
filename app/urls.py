@@ -8,10 +8,25 @@ from drf_spectacular.views import (
 from rest_framework.routers import DefaultRouter
 
 from core.views import UserViewSet
+from core.views import AutorViewSet
+from core.views import GeneroViewSet
+from core.views import EditoraViewSet
+from core.views import IdiomaViewSet
+from core.views import StatusViewSet
+from core.views import FrequenciaViewSet
+from core.views import HQViewSet
+
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
+router.register(r'autores', AutorViewSet, basename='autores')
+router.register(r'generos', GeneroViewSet, basename='generos')
+router.register(r'editoras', EditoraViewSet, basename='editoras')
+router.register(r'idiomas', IdiomaViewSet, basename='idiomas')
+router.register(r'estados', StatusViewSet, basename='estados')
+router.register(r'frequencias', FrequenciaViewSet, basename='frequencias')
+router.register(r'hqs', HQViewSet, basename='hqs')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
