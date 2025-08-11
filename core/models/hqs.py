@@ -6,6 +6,7 @@ from .status import Status
 from .editora import Editora
 from .frequencia import Frequencia
 
+
 class HQ(models.Model):
     nome = models.CharField(max_length=255)
     autor = models.ForeignKey(Autor, on_delete=models.PROTECT)
