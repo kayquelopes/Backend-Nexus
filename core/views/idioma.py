@@ -5,3 +5,4 @@ from core.serializers import IdiomaSerializer
 class IdiomaViewSet(ModelViewSet):
     queryset = Idioma.objects.all()
     serializer_class = IdiomaSerializer
+    pagination_class = None
