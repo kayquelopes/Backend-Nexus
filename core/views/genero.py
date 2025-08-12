@@ -5,3 +5,4 @@ from core.serializers import GeneroSerializer
 class GeneroViewSet(ModelViewSet):
     queryset = Genero.objects.all()
     serializer_class = GeneroSerializer
+    pagination_class = None 
