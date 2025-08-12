@@ -5,5 +5,5 @@ from .idioma import IdiomaSerializer
 from .status import StatusSerializer
 from .editora import EditoraSerializer
 from .frequencia import FrequenciaSerializer
+from .classificacaoIdicativa import ClassificacaoIndicativaSerializer
 from .hqs import HQSerializer
-

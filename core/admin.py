@@ -58,4 +58,5 @@ admin.site.register(models.Idioma)
 admin.site.register(models.Status) # se o nome correto for esse
 admin.site.register(models.Editora)
 admin.site.register(models.Frequencia)
+admin.site.register(models.ClassificacaoIndicativa)
 admin.site.register(models.HQ)

@@ -19,6 +19,7 @@ class HQ(models.Model):
     capa = models.ImageField(upload_to='capas/')
     quantidade_capitulos = models.PositiveIntegerField()
     frequencia = models.ForeignKey(Frequencia, on_delete=models.PROTECT)
+    classificacao_indicativa = models.ForeignKey('ClassificacaoIndicativa', on_delete=models.PROTECT, default=1)
 
     def __str__(self):
         return self.nome

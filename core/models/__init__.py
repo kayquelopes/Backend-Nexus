@@ -5,4 +5,5 @@ from .idioma import Idioma
 from .status import Status
 from .editora import Editora
 from .frequencia import Frequencia
+from .classificacaoIdicativa import ClassificacaoIndicativa
 from .hqs import HQ

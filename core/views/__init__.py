@@ -5,4 +5,5 @@ from .idioma import IdiomaViewSet
 from .status import StatusViewSet
 from .editora import EditoraViewSet
 from .frequencia import FrequenciaViewSet
+from .classificacaoIdicativa import ClassificacaoIndicativaViewSet
 from .hqs import HQViewSet

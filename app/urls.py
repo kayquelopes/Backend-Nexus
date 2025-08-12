@@ -14,6 +14,7 @@ from core.views import EditoraViewSet
 from core.views import IdiomaViewSet
 from core.views import StatusViewSet
 from core.views import FrequenciaViewSet
+from core.views import ClassificacaoIndicativaViewSet
 from core.views import HQViewSet
 
 
@@ -26,6 +27,7 @@ router.register(r'editoras', EditoraViewSet, basename='editoras')
 router.register(r'idiomas', IdiomaViewSet, basename='idiomas')
 router.register(r'estados', StatusViewSet, basename='estados')
 router.register(r'frequencias', FrequenciaViewSet, basename='frequencias')
+router.register(r'classificacoes', ClassificacaoIndicativaViewSet, basename='classificacoes')
 router.register(r'hqs', HQViewSet, basename='hqs')
 
 urlpatterns = [
