@@ -20,6 +20,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:8000',
 ]
+APPEND_SLASH = False
 
 # Application definition
 INSTALLED_APPS = [
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_spectacular',
     'rest_framework',
+    'rest_framework_simplejwt',
     'core',
 ]
 
@@ -149,10 +151,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'app.pagination.CustomPagination',
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': ( 
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
 }
 
 PASSAGE_APP_ID = os.getenv('PASSAGE_APP_ID', 'app_id')
-PASSAGE_API_KEY = os.getenv('PASSAGE_API_KEY', 'api_key')
+PASSAGE_API_KEY = os.getenv('PASSAGE_API_KEY', 'api_key')   
 PASSAGE_AUTH_STRATEGY = 2
 
 print(f'{MODE = } \n{MEDIA_URL = } \n{DATABASES = }')
