@@ -2,14 +2,14 @@
 # Sai do script se houver algum erro
 set -o errexit
 
-# Atualiza o pip
-pip install --upgrade pip
+# Atualiza o PDM (garante que está instalado)
+pip install --upgrade pdm
 
-# Instala as dependências
-pip install -r requirements.txt
+# Instala as dependências do pyproject.toml
+pdm install --no-self
 
-# Coleta os arquivos estáticos
-python manage.py collectstatic --no-input
+# Coleta os arquivos estáticos do Django
+pdm run python manage.py collectstatic --no-input
 
-# Aplica as migrações
-python manage.py migrate
+# Aplica as migrações do banco de dados
+pdm run python manage.py migrate
