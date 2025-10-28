@@ -16,10 +16,11 @@ class HQ(models.Model):
     data_lancamento = models.DateField()
     editora = models.ForeignKey(Editora, on_delete=models.PROTECT)
     sinopse = models.TextField()
-    capa = models.ImageField(upload_to='capas/')
+    capa = models.ImageField(upload_to='capas/', blank=True, null=True)
     quantidade_capitulos = models.PositiveIntegerField()
     frequencia = models.ForeignKey(Frequencia, on_delete=models.PROTECT)
     classificacao_indicativa = models.ForeignKey('ClassificacaoIndicativa', on_delete=models.PROTECT, default=1)
+    url = models.URLField(max_length=500, blank=True, null=True)
 
     def __str__(self):
         return self.nome

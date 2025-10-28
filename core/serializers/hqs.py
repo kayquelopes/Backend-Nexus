@@ -14,6 +14,7 @@ class HQSerializer(serializers.ModelSerializer):
     status = StatusSerializer(read_only=True)
     editora = EditoraSerializer(read_only=True)
     frequencia = FrequenciaSerializer(read_only=True)
+    
 
     class Meta:
         model = HQ
@@ -30,4 +31,6 @@ class HQSerializer(serializers.ModelSerializer):
             'capa',
             'quantidade_capitulos',
             'frequencia',
+            'classificacao_indicativa',
+            'url',
         ]
