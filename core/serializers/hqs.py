@@ -32,5 +32,4 @@ class HQSerializer(serializers.ModelSerializer):
             'quantidade_capitulos',
             'frequencia',
             'classificacao_indicativa',
-            'url',
         ]
