@@ -22,6 +22,7 @@ from core.views import StatusViewSet
 from core.views import FrequenciaViewSet
 from core.views import ClassificacaoIndicativaViewSet
 from core.views import HQViewSet
+from core.views.hqUrl import HQUrlViewSet
 
 
 router = DefaultRouter()
@@ -35,6 +36,7 @@ router.register(r'estados', StatusViewSet, basename='estados')
 router.register(r'frequencias', FrequenciaViewSet, basename='frequencias')
 router.register(r'classificacoes', ClassificacaoIndicativaViewSet, basename='classificacoes')
 router.register(r'hqs', HQViewSet, basename='hqs')
+router.register(r'hq-urls', HQUrlViewSet, basename='hq-urls')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

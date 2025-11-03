@@ -6,6 +6,7 @@ from .idioma import IdiomaSerializer
 from .status import StatusSerializer
 from .editora import EditoraSerializer
 from .frequencia import FrequenciaSerializer
+from .hqUrl import HQUrlSerializer  # importa serializer de URLs
 
 class HQSerializer(serializers.ModelSerializer):
     autor = AutorSerializer(read_only=True)
@@ -14,7 +15,7 @@ class HQSerializer(serializers.ModelSerializer):
     status = StatusSerializer(read_only=True)
     editora = EditoraSerializer(read_only=True)
     frequencia = FrequenciaSerializer(read_only=True)
-    
+    urls = HQUrlSerializer(many=True, read_only=True)  # URLs relacionadas
 
     class Meta:
         model = HQ
@@ -32,4 +33,5 @@ class HQSerializer(serializers.ModelSerializer):
             'quantidade_capitulos',
             'frequencia',
             'classificacao_indicativa',
+            'urls',
         ]

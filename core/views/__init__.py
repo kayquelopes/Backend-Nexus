@@ -7,3 +7,4 @@ from .editora import EditoraViewSet
 from .frequencia import FrequenciaViewSet
 from .classificacaoIdicativa import ClassificacaoIndicativaViewSet
 from .hqs import HQViewSet
+from .hqUrl import HQUrlViewSet
