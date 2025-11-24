@@ -8,3 +8,5 @@ from .frequencia import Frequencia
 from .classificacaoIdicativa import ClassificacaoIndicativa
 from .hqs import HQ
 from .hqUrl import HQUrl
+from .like import Like
+from .save import Save

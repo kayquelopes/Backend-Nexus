@@ -15,7 +15,9 @@ class HQSerializer(serializers.ModelSerializer):
     status = StatusSerializer(read_only=True)
     editora = EditoraSerializer(read_only=True)
     frequencia = FrequenciaSerializer(read_only=True)
-    urls = HQUrlSerializer(many=True, read_only=True)  # URLs relacionadas
+    urls = HQUrlSerializer(many=True, read_only=True)
+
+    capa = serializers.SerializerMethodField()  # envia a URL completa
 
     class Meta:
         model = HQ
@@ -35,3 +37,9 @@ class HQSerializer(serializers.ModelSerializer):
             'classificacao_indicativa',
             'urls',
         ]
+
+    def get_capa(self, obj):
+        request = self.context.get('request')
+        if obj.capa:
+            return request.build_absolute_uri(obj.capa.url)
+        return None

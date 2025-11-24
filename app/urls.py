@@ -23,6 +23,7 @@ from core.views import FrequenciaViewSet
 from core.views import ClassificacaoIndicativaViewSet
 from core.views import HQViewSet
 from core.views.hqUrl import HQUrlViewSet
+from core.views.curtidas_salvos import LikeViewSet, SaveViewSet
 
 
 router = DefaultRouter()
@@ -37,6 +38,9 @@ router.register(r'frequencias', FrequenciaViewSet, basename='frequencias')
 router.register(r'classificacoes', ClassificacaoIndicativaViewSet, basename='classificacoes')
 router.register(r'hqs', HQViewSet, basename='hqs')
 router.register(r'hq-urls', HQUrlViewSet, basename='hq-urls')
+router.register(r'likes', LikeViewSet, basename='likes')
+router.register(r'saves', SaveViewSet, basename='saves')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

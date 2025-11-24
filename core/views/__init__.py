@@ -8,3 +8,4 @@ from .frequencia import FrequenciaViewSet
 from .classificacaoIdicativa import ClassificacaoIndicativaViewSet
 from .hqs import HQViewSet
 from .hqUrl import HQUrlViewSet
+from .curtidas_salvos import LikeViewSet, SaveViewSet

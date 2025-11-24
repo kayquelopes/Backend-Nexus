@@ -46,6 +46,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(
         default=True, verbose_name=_('Usuário está ativo'), help_text=_('Indica que este usuário está ativo.')
     )
+    bio = models.TextField(blank=True, null=True)
+    foto = models.ImageField(upload_to='users/fotos/', blank=True, null=True)
     is_staff = models.BooleanField(
         default=False,
         verbose_name=_('Usuário é da equipe'),

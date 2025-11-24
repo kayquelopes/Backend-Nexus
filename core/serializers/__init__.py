@@ -8,4 +8,6 @@ from .frequencia import FrequenciaSerializer
 from .classificacaoIdicativa import ClassificacaoIndicativaSerializer
 from .hqs import HQSerializer
 from .hqUrl import HQUrlSerializer
+from .like import LikeSerializer
+from .save import SaveSerializer
 
